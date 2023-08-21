@@ -1,0 +1,27 @@
+default: &default
+  username: hope
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: hellorails
+
+test:
+  <<: *default
+  database: hellorails_test
+  timeout: 5000
+
+development:
+  <<: *default
+  database: hellorails
+
+test:
+  <<: *default
+  database: hellorails_test
+
+production:
+  <<: *default
+  database: hellorails_production
+  username: hope
