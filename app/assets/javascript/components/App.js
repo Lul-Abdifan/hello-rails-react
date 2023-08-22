@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <Route path="/hello" component={Greeting} />
+        <Route path="/" component={Greeting} />
       </Router>
     </Provider>
   );
