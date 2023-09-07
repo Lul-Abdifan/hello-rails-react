@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 
 const initialState = {
-  greeting: ''
+  greeting: '',
 };
 
 const reducer = (state, action) => {
@@ -13,27 +13,31 @@ const reducer = (state, action) => {
   }
 };
 
-function fetch_greeting() {
+function fetchMessage() {
   return fetch('http://127.0.0.1:3000/api/greetings/random')
-    .then(response => response.json())
-    .then(data => data.greeting);
+    .then((response) => response.json())
+    .then((data) => data.greeting);
 }
 
 const Greeting = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    fetch_greeting().then(greeting => {
+    fetchMessage().then((greeting) => {
       dispatch({ type: 'setGreeting', payload: greeting });
     });
   }, []);
 
   return (
     <div>
-                      <h1>Greeting message:  {state.greeting}</h1>
+      <h1>
+        {' '}
+        Greeting message:
+        {state.greeting}
+      </h1>
     </div>
-    
-       );
+
+  );
 };
 
 export default Greeting;

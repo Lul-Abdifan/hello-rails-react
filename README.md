@@ -4,7 +4,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Back-End-Link](#backend-link)
+ 
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -96,15 +96,6 @@ To run the project, execute the following command:
  ./bin/dev
 ```
 
-### Run tests
-
-To run tests, run the following command:
-
-```sh
-  npx npx eslint "**/*.{js,jsx}"
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
